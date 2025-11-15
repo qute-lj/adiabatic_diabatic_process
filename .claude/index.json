@@ -1,0 +1,156 @@
+{
+  "project_info": {
+    "name": "adiabatic_diabatic_process",
+    "summary": "adiabatic_diabatic_process - 绝热/非绝热过程研究项目",
+    "timestamp": "2025-11-15T14:15:42",
+    "language": "Python",
+    "total_files_estimated": 6,
+    "modules_detected": 1
+  },
+  "scan_coverage": {
+    "total_files_found": 6,
+    "files_scanned": 6,
+    "coverage_percentage": 100.0,
+    "modules_covered": 1,
+    "modules_total": 1,
+    "truncated": false
+  },
+  "modules": [
+    {
+      "path": "single_adabatic_two_level_system",
+      "type": "python_module",
+      "language": "Python",
+      "entry_point": "two_level_evolution_fixed.py",
+      "interface_files": [
+        "two_level_evolution_fixed.py",
+        "comprehensive_adjustable_plot.py"
+      ],
+      "test_files": [],
+      "config_files": [],
+      "data_files": [
+        "comprehensive_alpha*.png",
+        "simulation_data_fixed.npz"
+      ],
+      "coverage": {
+        "files_analyzed": 2,
+        "lines_analyzed": 650,
+        "functions_identified": 15,
+        "classes_identified": 1
+      },
+      "status": "fully_analyzed"
+    }
+  ],
+  "root_level_files": [
+    {
+      "path": "README.md",
+      "type": "documentation",
+      "size_lines": 177,
+      "analyzed": true
+    },
+    {
+      "path": "single_adabatic_system_README.md",
+      "type": "documentation",
+      "size_lines": 177,
+      "analyzed": true
+    },
+    {
+      "path": "comprehensive_adjustable_plot.py",
+      "type": "script",
+      "size_lines": 300,
+      "analyzed": true
+    },
+    {
+      "path": "two_level_evolution_fixed.py",
+      "type": "script",
+      "size_lines": 350,
+      "analyzed": true
+    },
+    {
+      "path": ".gitignore",
+      "type": "config",
+      "size_lines": 76,
+      "analyzed": true
+    }
+  ],
+  "ignored_files": {
+    "by_gitignore": [
+      "*.png",
+      "*.jpg",
+      "*.jpeg",
+      "*.pdf",
+      "*.svg",
+      "*.npz",
+      "*.h5",
+      "*.hdf5",
+      "__pycache__/",
+      "*.pyc",
+      "*.pyo",
+      ".vscode/",
+      ".idea/",
+      ".DS_Store",
+      "Thumbs.db"
+    ],
+    "by_size": [],
+    "by_binary": [],
+    "count_total": 0
+  },
+  "scan_gaps": {
+    "missing_interfaces": [],
+    "missing_tests": [
+      "single_adabatic_two_level_system/test_*.py",
+      "tests/",
+      "unit_tests/"
+    ],
+    "missing_configs": [
+      "requirements.txt",
+      "pyproject.toml",
+      "setup.py"
+    ],
+    "missing_documentation": [
+      "API文档",
+      "理论推导详细说明"
+    ],
+    "recommended_next_scan": [
+      "添加单元测试模块",
+      "创建requirements.txt",
+      "补充API文档"
+    ]
+  },
+  "code_metrics": {
+    "total_python_lines": 650,
+    "total_documentation_lines": 354,
+    "total_config_lines": 76,
+    "docstring_coverage": "high",
+    "type_annotation_usage": "moderate",
+    "modularization_score": "good"
+  },
+  "physical_models": {
+    "landau_zener_system": {
+      "hamiltonian": "[[α*t, V], [V, -α*t]]",
+      "parameters": ["alpha", "V"],
+      "phenomena": ["adiabatic_transition", "berry_phase", "landau_zener_tunneling"]
+    }
+  },
+  "dependencies": {
+    "required": ["numpy", "matplotlib", "scipy"],
+    "optional": [],
+    "development": []
+  },
+  "next_recommendations": {
+    "immediate": [
+      "创建requirements.txt文件",
+      "添加单元测试覆盖TwoLevelSystem类",
+      "补充数值方法的收敛性测试"
+    ],
+    "short_term": [
+      "实现多能级系统扩展",
+      "添加耗散系统支持",
+      "创建交互式Jupyter notebook"
+    ],
+    "long_term": [
+      "实现量子优化控制算法",
+      "添加机器学习参数优化",
+      "开发Web界面可视化工具"
+    ]
+  }
+}

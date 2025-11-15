@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(C:Softwares_2025Anacondapython.exe comprehensive_adjustable_plot.py)",
+      "Bash(\"C:\\Softwares_2025\\Anaconda\\python.exe\":*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
