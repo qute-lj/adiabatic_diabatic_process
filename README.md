@@ -18,7 +18,12 @@ adiabatic_diabatic_process/
 ├── single_adabatic_two_level_system/        # 单绝热变量二能级系统
 │   ├── comprehensive_adjustable_plot.py     # 综合分析脚本
 │   ├── two_level_evolution_fixed.py         # 二能级系统核心模块
-│   └── comprehensive_alpha*.png            # 生成的分析图表 
+│   └── comprehensive_alpha*.png            # 生成的分析图表
+├── double_adabatic_two_level_system_dirac_point/  # 二维狄拉克点Berry相位模块
+│   ├── dirac_system.py                      # 狄拉克系统核心引擎
+│   ├── visualization_tools.py               # 可视化工具
+│   ├── main_analysis_fixed.py               # 主分析脚本（修复版）
+│   └── CLAUDE.md                            # 模块详细文档
 ├── README.md                                # 项目总体说明（本文档）
 └── [future_modules]/                        # 未来可扩展模块
     ├── multi_adabatic_variables/            # 多绝热变量系统
@@ -52,7 +57,31 @@ H(t) = ⎡ αt   V ⎤
 - 基态Berry相位≈0.017 rad，激发态Berry相位≈220 rad (≈70π)
 - Landau-Zener跃迁概率P_LZ≈5×10⁻²⁸（几乎完全绝热）
 
-### 2. 未来研究方向
+### 2. 二维狄拉克点Berry相位系统 (`double_adabatic_two_level_system_dirac_point/`)
+
+**哈密顿量模型**:
+```
+H(k) = v_F(k_x σ_x + k_y σ_y) + V σ_z
+```
+
+**核心特点**:
+- **控制参数**: 二维波矢 k = (k_x, k_y) 作为绝热参数
+- **物理维度**: 2D能带理论，描述狄拉克点附近能带结构
+- **关键现象**: Berry相位作为拓扑不变量、陈数、能隙打开效应
+
+**分析工具**:
+- 3D能带结构可视化（E vs k_x, k_y）
+- k空间回路积分Berry相位计算
+- 质量项V调控的拓扑相变研究
+- 绝热参数γ(t)实时监测
+
+**主要发现**:
+- V=0（无能隙）: Berry相位 = π（拓扑非平庸）
+- V≠0（有能隙）: Berry相位 → 0（拓扑平庸）
+- 拓扑相变: π → 0 的连续演化
+- 绝热条件: γ(t) ≪ 1 时Berry相位精确量子化
+
+### 3. 未来研究方向
 
 #### 多绝热变量系统
 - 独立控制多个哈密顿量参数
@@ -94,6 +123,23 @@ python comprehensive_adjustable_plot.py
 python -c "
 from comprehensive_adjustable_plot import create_comprehensive_plot
 create_comprehensive_plot(alpha=0.1, V=1.0)
+"
+```
+
+### 运行二维狄拉克点Berry相位分析
+```bash
+cd double_adabatic_two_level_system_dirac_point/
+
+# 运行主分析脚本（无能隙狄拉克点）
+python main_analysis_fixed.py
+
+# 或自定义参数运行
+python -c "
+from main_analysis_fixed import create_dirac_analysis_fixed
+# V=0: 无能隙（Berry相位=π）
+create_dirac_analysis_fixed(V=0.0)
+# V=0.1: 有能隙（Berry相位≈0）
+create_dirac_analysis_fixed(V=0.1)
 "
 ```
 
