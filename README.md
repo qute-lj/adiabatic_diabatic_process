@@ -18,8 +18,7 @@ adiabatic_diabatic_process/
 ├── single_adabatic_two_level_system/        # 单绝热变量二能级系统
 │   ├── comprehensive_adjustable_plot.py     # 综合分析脚本
 │   ├── two_level_evolution_fixed.py         # 二能级系统核心模块
-│   ├── comprehensive_alpha*.png            # 生成的分析图表
-│   └── README.md                            # 单绝热变量系统详细说明
+│   └── comprehensive_alpha*.png            # 生成的分析图表 
 ├── README.md                                # 项目总体说明（本文档）
 └── [future_modules]/                        # 未来可扩展模块
     ├── multi_adabatic_variables/            # 多绝热变量系统
